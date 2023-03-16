@@ -10,7 +10,7 @@ const NavbarItems = ({ title, classProps }) => {
 };
 const Navbar = () => {
 
-    const [togglemenu,setToggle]=useState(true);
+    const [togglemenu,setToggle]=useState(false);
   return (
     <>
       <div className="wh nav-container">
@@ -26,11 +26,7 @@ const Navbar = () => {
             <button>Login</button>
           </li>
           </ul>
-                <div className="flex-relative">
-                    {togglemenu
-                    ?<AiOutlineClose fontSize={28} className=" " onclick={()=>setToggle(false)}/>:
-                    <HiMenuAlt4 fontSize={28} className="" onclick={()=>setToggle(true)}/>}
-                </div>
+                
          
         </div>
       </div>

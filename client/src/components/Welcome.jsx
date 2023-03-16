@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { TransactionContext } from "../context/TransactionContext";
-
+import './Welcome.css';
 const Welcome = () => {
   const {
     connectWallet,
@@ -21,7 +21,7 @@ const Welcome = () => {
   };
 
   return (
-    <>
+    <div className="container">
       <div className="w-full max-w-xs">
         <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
 
@@ -80,10 +80,10 @@ const Welcome = () => {
         
       </div>
 
-      <h1>Welcome</h1>
+     
 
-      {!connectedAccount && <button onClick={connectWallet}>click me</button>}
-    </>
+      {!connectedAccount && <button className="btn" onClick={connectWallet}>connectWallet</button>}
+    </div>
   );
 };
 

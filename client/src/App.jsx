@@ -12,10 +12,10 @@ import CheckIn from './components/CheckIn';
 function App() {
   return (
 
-    <div className="min-h-screen">
+    <div className="">
       <div className="gradient-bg-welcome">
       <Navbar/>
-        {/* <Welcome/> */}
+        <Welcome/>
        
       </div>
       <Services/>
