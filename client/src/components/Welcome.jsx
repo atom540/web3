@@ -69,6 +69,8 @@ const Welcome = () => {
             />
           </div>
           <div className="flex items-center justify-center">
+          
+
             <button
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="button" onClick={handleSubmit}
@@ -81,9 +83,9 @@ const Welcome = () => {
       </div>
 
      
-
-      {!connectedAccount && <button className="btn" onClick={connectWallet}>connectWallet</button>}
-    </div>
+<div className="div">
+      {!connectedAccount && <button className="b-btn" onClick={connectWallet}>connectWallet</button>}
+    </div></div>
   );
 };
 

@@ -25,17 +25,12 @@ const Navbar = () => {
             <li className="btn">
             <button>Login</button>
           </li>
-          </ul>
-<<<<<<< HEAD
-                
-=======
-                <div className="flex-relative">
+          </ul> 
+                {/* <div className="flex-relative">
                     {togglemenu
                     ?<AiOutlineClose fontSize={28} className=" " onClick={()=>setToggle(false)}/>:
                     <HiMenuAlt4 fontSize={28} className="" onClick={()=>setToggle(true)}/>}
-                </div>
->>>>>>> 99497d0af4bf37d26f7141944d841ae72dd1df8f
-         
+                </div> */}
         </div>
       </div>
     </>
