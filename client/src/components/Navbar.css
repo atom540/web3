@@ -1,0 +1,41 @@
+.wh {
+    color:white
+}
+
+.nav-container{
+    display: flex;
+    font-size: 28px;
+    /* height: 50vh; */
+
+}
+
+img{
+    width: 50px;
+    height: 50px;
+}
+.navitems{
+    display: flex;
+}
+.navitems ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    gap: 2rem;
+
+}
+
+.navitems li:hover{
+    color:goldenrod
+}
+
+.navitems .btn{
+    border-radius: 15px;
+    color: white;
+    background-color: blue;
+}
+.flex-realtive{
+    width: 50px;
+    height: 50px;
+}
