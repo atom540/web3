@@ -109,8 +109,8 @@ export const TransactionProvider = ({ children }) => {
 
     //   console.log(account);
     } catch (error) {
-      console.log(error);
-      // throw new Error("No ethereum object");
+      // console.log(error);
+      throw new Error("No ethereum object");
     }
   };
 
@@ -128,7 +128,7 @@ export const TransactionProvider = ({ children }) => {
         window.localStorage.setItem("transactionCount", currentTransactionCount);
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
 
       throw new Error("No ethereum object");
     }
@@ -149,8 +149,8 @@ export const TransactionProvider = ({ children }) => {
       if (!ethereum) return alert("please install metamask");
       const account = await ethereum.request({ method: "eth_requestAccounts" });
       setConnectedAccount(account[0]);
-      console.log(account[0])
-      console.log("The account is connected");
+      // console.log(account[0])
+      // console.log("The account is connected");
     } catch (error) {
       console.log(error);
       throw new Error("No ethereum object");

@@ -34,10 +34,10 @@ const TransactionsCard = ({ addressTo, addressFrom, timestamp,message,amount}) =
     >
       <div className="flex flex-col items-center w-full mt-3">
         <div className="display-flex justify-start w-full mb-6 p-2">
-          <a href={`https://mumbai.polygonscan.com/tx/${addressFrom}`} target="_blank" rel="noreferrer">
+          <a href={`https://mumbai.polygonscan.com/address/${addressFrom}`} target="_blank" rel="noreferrer">
             <p className="text-white text-base">From: {RepresentAddressAs(addressFrom)}</p>
           </a>
-          <a href={`https://mumbai.polygonscan.com/tx/${addressTo}`} target="_blank" rel="noreferrer">
+          <a href={`https://mumbai.polygonscan.com/address/${addressTo}`} target="_blank" rel="noreferrer">
             <p className="text-white text-base">To: {RepresentAddressAs(addressTo)}</p>
           </a>
           <p className="text-white text-base">Amount: {amount} MATIC</p>
