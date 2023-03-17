@@ -22,9 +22,7 @@ const Navbar = () => {
             {["Market", "Exahange", "Wallets"].map((items, index) => (
               <NavbarItems key={items + index} title={items} />
             ))}
-            <li className="btn">
-            <button>Login</button>
-          </li>
+            
           </ul>
 
                 
