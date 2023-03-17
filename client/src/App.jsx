@@ -7,8 +7,8 @@ import {
 } from "react-router-dom";
 import {Navbar,Welcome,Services,Footer,Transactions} from './components';
 
-import Stock from './components/Stock';
-import CheckIn from './components/CheckIn';
+// import Stock from './components/Stock';
+// import CheckIn from './components/CheckIn';
 function App() {
   return (
 
@@ -22,7 +22,7 @@ function App() {
       <Transactions/>
    
     <Router>
-    {/* <Navbar/> */}
+    <Footer/>
    
     <Routes>
 {/*      

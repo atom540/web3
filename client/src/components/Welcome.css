@@ -6,8 +6,17 @@
     max-width: 67rem;
     margin-left: 14rem;
 }
-.btn{
+.b-btn{
     border-radius: 15px;
     color: white;
     background-color: blue;
+    width: 20rem;
+    height: 2.2rem;
+    position: relative;
+    top: 15px;
+    left: 22px;
+}
+
+.div{
+    margin: -24px;
 }

@@ -27,13 +27,8 @@ const Navbar = () => {
           </li>
           </ul>
 
-                <div className="flex-relative">
-                    {togglemenu
-                    ?<AiOutlineClose fontSize={28} className=" " onClick={()=>setToggle(false)}/>:
-                    <HiMenuAlt4 fontSize={28} className="" onClick={()=>setToggle(true)}/>}
-                </div>
+                
 
-         
         </div>
       </div>
     </>

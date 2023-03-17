@@ -12,10 +12,10 @@ const Welcome = () => {
   } = useContext(TransactionContext);
 
   const handleSubmit = (e) => {
-    const { addressTo, amount, keyword, message } = formData;
+    const { addressTo, amount,  message } = formData;
     e.preventDefault();
     // console.log(addressTo, amount, keyword, message);
-    if (!addressTo || !amount || !keyword || !message) return;
+    if (!addressTo || !amount ||  !message) return;
     // console.log("subit");
     sendTransaction();
   };
@@ -23,7 +23,7 @@ const Welcome = () => {
   return (
     <div className="container">
       <div className="w-full max-w-xs">
-        <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <form className="bg-primary shadow-md rounded px-8 pt-6 pb-8 mb-4">
 
           <div className="mb-4">
             <input
@@ -47,16 +47,6 @@ const Welcome = () => {
             />
           </div>
 
-          <div className="mb-4">
-            <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="keyword"
-              name="keyword"
-              type="text"
-              placeholder="Keyword"
-              onChange={handleChange}
-            />
-          </div>
 
           <div className="mb-4">
             <input
@@ -69,11 +59,13 @@ const Welcome = () => {
             />
           </div>
           <div className="flex items-center justify-center">
+          
+
             <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-green-500 hover:bg-green-900 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="button" onClick={handleSubmit}
             >
-              Send Now
+              Send
             </button>
           </div>
         </form>
@@ -81,9 +73,9 @@ const Welcome = () => {
       </div>
 
      
-
-      {!connectedAccount && <button className="btn" onClick={connectWallet}>connectWallet</button>}
-    </div>
+<div className="div">
+      {!connectedAccount && <button className="b-btn" onClick={connectWallet}>connectWallet</button>}
+    </div></div>
   );
 };
 
