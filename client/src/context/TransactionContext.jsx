@@ -109,8 +109,8 @@ export const TransactionProvider = ({ children }) => {
 
     //   console.log(account);
     } catch (error) {
-      console.log(error);
-      // throw new Error("No ethereum object");
+      // console.log(error);
+      throw new Error("No ethereum object");
     }
   };
 
@@ -128,7 +128,7 @@ export const TransactionProvider = ({ children }) => {
         window.localStorage.setItem("transactionCount", currentTransactionCount);
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
 
       throw new Error("No ethereum object");
     }
@@ -149,8 +149,8 @@ export const TransactionProvider = ({ children }) => {
       if (!ethereum) return alert("please install metamask");
       const account = await ethereum.request({ method: "eth_requestAccounts" });
       setConnectedAccount(account[0]);
-      console.log(account[0])
-      console.log("The account is connected");
+      // console.log(account[0])
+      // console.log("The account is connected");
     } catch (error) {
       console.log(error);
       throw new Error("No ethereum object");
@@ -169,11 +169,11 @@ export const TransactionProvider = ({ children }) => {
       const { addressTo, amount,message } = formData;
       const contract = await getEthereumContract();
       const parseAmount = ethers.utils.parseUnits(amount, "ether");
-      console.log("running")
+      // console.log("running")
       console.log(parseAmount)
       console.log(await contract.signer.getAddress())
       // await contract.sendmoney(addressTo,parseAmount,message);
-      console.log("done")
+      // console.log("done")
       await ethereum.request({
         method: "eth_sendTransaction",
         params: [
@@ -190,11 +190,11 @@ export const TransactionProvider = ({ children }) => {
       
 
       setIsLoading(true);
-      console.log(`Loading - ${transactionHash.hash}`);
+      // console.log(`Loading - ${transactionHash.hash}`);
       await transactionHash.wait();
 
       setIsLoading(false);
-      console.log(`Success - ${transactionHash.hash}`);
+      // console.log(`Success - ${transactionHash.hash}`);
       const transactionCount = await contract.getTransactionCount();
       // console.log(transactionCount);
       setTransactionCount(transactionCount.toNumber());
